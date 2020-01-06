@@ -38,7 +38,6 @@ export default class FormLogin extends Component {
 
             Axios.post('/api/login', bodyFormData)
                 .then(function (response){
-                    console.log(response);
                     getUsername();
                 })
                 .catch(function (error) {
@@ -50,7 +49,8 @@ export default class FormLogin extends Component {
         const getUsername = async () => {
             Axios.get('/api/user/name')
                 .then(function (response){
-                    console.log(response);
+                    console.log(response.data);
+
                 })
                 .catch(function (response){
                     console.log(response);

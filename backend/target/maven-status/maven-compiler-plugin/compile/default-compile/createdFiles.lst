@@ -1,0 +1,11 @@
+nz/co/jar/wilder/application/services/DatabaseBackedUserDetailsService.class
+nz/co/jar/wilder/application/components/security/UserDetailsImpl.class
+nz/co/jar/wilder/application/configuration/WebSecurityConfig.class
+nz/co/jar/wilder/application/services/CustomerService.class
+nz/co/jar/wilder/application/models/Customer.class
+nz/co/jar/wilder/application/models/User.class
+nz/co/jar/wilder/application/database/UserRepository.class
+nz/co/jar/wilder/application/database/CustomerRepository.class
+nz/co/jar/wilder/application/controllers/TestController.class
+nz/co/jar/wilder/application/Application.class
+nz/co/jar/wilder/application/services/CSVService.class

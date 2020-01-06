@@ -1,0 +1,11 @@
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/database/CustomerRepository.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/services/CustomerService.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/services/DatabaseBackedUserDetailsService.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/services/CSVService.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/models/Customer.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/components/security/UserDetailsImpl.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/models/User.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/controllers/TestController.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/configuration/WebSecurityConfig.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/database/UserRepository.java
+/home/rudolf/IdeaProjects/learning/react-web-component-java/backend/src/main/java/nz/co/jar/wilder/application/Application.java

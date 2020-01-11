@@ -18,7 +18,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -53,7 +56,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
                 .maximumSessions(1)
-                .and().and()
+                .and()
+                .and()
+                .exceptionHandling()
+                .defaultAuthenticationEntryPointFor(getRestAuthenticationEntryPoint(), new AntPathRequestMatcher("/**"))
+                .and()
+                .authorizeRequests()
+                .antMatchers("/api/user/register")
+                .permitAll()
+                .and()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated()
@@ -72,15 +83,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "Origin, X-Requested-With, Content-Type, Accept, Key, Authorization");
 
                 String header = httpServletResponse.getHeader("Set-Cookie");
-                System.err.println(header);
             }
         })
                 .loginProcessingUrl("/api/login")
                 .permitAll()
                 .and()
                 .logout()
+                .logoutUrl("/api/logout")
                 .permitAll();
 //        http.authorizeRequests().anyRequest().permitAll();
+    }
+
+    private AuthenticationEntryPoint getRestAuthenticationEntryPoint() {
+        return new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED);
     }
 
     @Bean

@@ -5,6 +5,7 @@ import HomePage from './Home-Page'
 import LoginPage from './Login-Page'
 import SecurePage from "./Secure-Page";
 import UserPage from "./User-Page";
+import RegisterPage from "./Register-Page";
 
 interface IState {
     loggedIn: boolean
@@ -46,7 +47,7 @@ class App extends Component {
                             <Route exact path='/user' component={UserPage}/>
                             <Route exact path='/data' component={SecurePage}/>
                             <Route exact path='/login' component={LoginPage}/>
-                            <Route exact path='/register' component={HomePage}/>
+                            <Route exact path='/register' component={RegisterPage}/>
 
                         </Switch>
                     </div>
